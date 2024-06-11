@@ -1,0 +1,19 @@
+/*==================== Playlist TABS ====================*/
+const tabs = document.querySelectorAll('[data-target]'),
+    tabContents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab =>{
+    tab.addEventListener('click', () =>{
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContents.forEach(tabContent =>{
+            tabContent.classList.remove('playlist__active')
+        })
+        target.classList.add('playlist__active')
+
+        tabs.forEach(tab =>{
+            tab.classList.remove('playlist__active')
+        })
+        tab.classList.add('playlist__active')
+    })
+})

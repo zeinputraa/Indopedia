@@ -1,0 +1,242 @@
+:root {
+    --header-height: 3rem;
+
+    /* Collors */
+    --black-collor: #0B1E1E;
+    --orange-collor: #E2582D;
+    --green-collor: #0F8595;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 5rem;
+    --bigger-font-size: 3rem;
+    --big-font-size: 2.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --text-line-height: 2rem;
+
+    /*========== Font weight ==========*/
+    --font-italic: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== Margenes Bottom ==========*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+body {
+    width: 1440px;
+    height: 741px;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/Modelsumatera.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.playlist__container {
+    grid-template-columns: max-content 1fr;
+    margin: 71px 72px;
+    column-gap: 86px;
+}
+
+.playlist__tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 335px;
+    height: 516px;
+}
+
+/* Active link */
+.playlist [data-content] {
+    display: none;
+}
+
+.playlist__active[data-content] {
+    display: block;
+}
+
+.playlist__button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 334px;
+    height: 129px;
+    padding: 41px 29px;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.playlist__tabs .playlist__active {
+    border-left: 5px solid #E2582D;
+    background: linear-gradient(90deg, rgba(226, 88, 45, 0.5) 0%, rgba(11, 30, 30, 0) 100%);
+    border-bottom: none;
+}
+
+.playlist__judul {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* text-align: center; */
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.playlist__asal {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 0.7;
+
+}
+
+.playlist__sections {
+    display: flex;
+    flex-direction: column;
+}
+
+.button__back {
+    display: flex;
+    width: 87px;
+    height: 24px;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    margin-bottom: 33px;
+
+}
+
+.button__back:hover {
+    color: var(--orange-collor);
+    transition: .2s;
+}
+
+.button__back:hover .back__icon {
+    transform: translateX(-5px);
+    transition: .4s;
+}
+
+.content__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content__title {
+    max-width: 323px;
+    height: auto;
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 58px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+
+.est {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: bottom;
+    color: #FFFFFF;
+    opacity: 0.64;
+    margin-top: 48px;
+}
+
+.playlist__line {
+    margin-bottom: 33px;
+}
+
+.playlist__line span:nth-child(2) {
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.playlist__line span:nth-child(1) {
+    display: block;
+    height: 4px;
+    width: 40%;
+    background-color: #E2582D;
+    transform: translateY(2px);
+    border-radius: 10px;
+}
+
+.content__description {
+    width: 542px;
+    height: 144px;
+    font-weight: var(--font-italic);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.013em;
+    color: #FFFFFF;
+    margin-bottom: 65px;
+}
+
+.pencipta__lagu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 67px;
+}
+
+.nama__pencipta {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.sebagai__pencipta {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    opacity: 0.4;
+    font-weight: var(--font-italic);
+}
+
+.button__musik {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 213px;
+    height: 59px;
+    padding: 21px 44px;
+    background-color: var(--orange-collor);
+    filter: drop-shadow(0px 4px 33px rgba(226, 88, 45, 0.8));
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.button__musik:hover {
+    /* background-color: var(--green-collor); */
+    filter: none;
+    transition: .4s;
+}
+
+.musik__icon {
+    font-size: 20px;
+}
